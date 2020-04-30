@@ -7,7 +7,6 @@ export class ListKeys {
     ) {}
 
     handler = async (event: APIGatewayEvent) => {
-        console.log(event);
         const list = await this.keyModel.listTemporaryExposureKeys(event.queryStringParameters?.continuationToken);
 
         return {

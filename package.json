@@ -1,0 +1,26 @@
+{
+    "name": "rona",
+    "description": "Skeleton for the serverless framework",
+    "version": "0.1.0",
+    "repository": "github:andriesss/rona",
+    "license": "MIT",
+    "dependencies": {},
+    "devDependencies": {
+        "@types/aws-lambda": "^8.10.51",
+        "serverless": "^1.68.0",
+        "serverless-offline": "^5.12.1",
+        "serverless-s3-local": "^0.5.4",
+        "serverless-plugin-typescript": "^1.1.9",
+        "serverless-plugin-common-excludes": "^3.0.0",
+        "serverless-plugin-include-dependencies": "^4.1.0",
+        "tslint": "^6.1.2",
+        "typescript": "^3.8.3"
+    },
+    "scripts": {
+        "start": "node_modules/.bin/sls offline start --env local --stage local",
+        "test": "eslint --ext .js,.ts . && jest --config=jest.config.js --coverage",
+        "fix": "eslint --ext .js,.ts . --fix",
+        "lint": "eslint --ext .js,.ts .",
+        "format": "prettier --write \"app/**/*.ts\" \"test/**/*.ts\""
+    }
+}
